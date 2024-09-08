@@ -17,19 +17,19 @@ Tiger,Shere Khan,8
 ## Tasks
 
 1. Animal Class
-- Create a class for each animal with attributes species, name, age
+- Create a class for each animal with attributes species, name, age (TICK)
 
 
-2. Zoo Class with Methods
+2. Zoo Class with Methods (TICK)
 Create a Zoo class that manages animals by passing the opening and closing hours of the zoo as turple, with the following methods:
 
 - add_animal(): Adds a new animal to the zoo.
 - get_all_animals(): Returns all the animals in the zoo.
 - get_zoo_hours(): Returns the zoo’s opening and closing hours (stored as a tuple).
-- get_species_count(): Returns the number of animals of each species (stored in a dictionary).
+- get_species_count(): Returns the number of animals of each species (stored in a dictionary). (check this)
 
 
-3. Reading from a CSV
+3. Reading from a CSV (TICK)
 
 Create a function to read animals' data from a CSV file and add them to the zoo automatically. Clues:
  - initialise a zoo class instance like outside the function: 
@@ -43,7 +43,7 @@ Create a function to read animals' data from a CSV file and add them to the zoo 
  - Add each animal to your `zoo` instance
 
 
-4. Visitor Info Functions
+4. Visitor Info Functions 
    
 Create the following functions to give the visitor info
 - Given a time of arrival, let them whether the zoo is closed or opened
