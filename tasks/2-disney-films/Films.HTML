@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:rgb(0, 0, 0);">
+
+<title>My Favorite Films</title>
+<style>
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+h1 {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.description {
+            display: none; /* Initially hide descriptions */
+}
+
+button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+}
+h2 {
+    background-color: rgb(40, 39, 39);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+p {
+    background-color: rgb(165, 165, 165);
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+img {
+    width: 300px;
+    height: 500px;
+    display: block;
+    margin: 10px 0;
+    margin-top: 10px;
+    margin-left: 450px;
+}
+
+</style>
+
+<h1>The Queen's Gambit</h1>
+<button onclick="ShowDescription('description1')">Show Description</button>
+<h2 id="description1" class="description">Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to become the greatest chess player in the world.</h2>
+<img src="C:\Users\clare\Documents\GalsThatCode\tasks\2-disney-films\QueensGambit.jpg" width="300" height="500">
+<p>Possibly my favourite film 10/10 would recommend.</p>
+
+<h1>Catch Me If You Can</h1>
+<button onclick="ShowDescription('description2')">Show Description</button>
+<h2 id="description2" class="description">Frank Abagnale Jr is a con man who poses as a pilot, doctor and lawyer and cashes forged cheques worth millions before his 21st birthday, despite being constantly chased by FBI agent Carl Hanratty.</h2>
+<img src="C:\Users\clare\Documents\GalsThatCode\tasks\2-disney-films\CatchMe.jpg" width="300" height="500">
+<p>Inspiring to be more cheeky.</p>
+
+<h1>Trainspotting</h1>
+<button onclick="ShowDescription('description3')">Show Description</button>
+<h2 id="description3" class="description">Renton is profoundly immersed in the narcotic circuit in Edinburgh. He endeavours to purify himself and quit consuming drugs notwithstanding the allure of the drugs and the potent influence of pals.</h2>
+<img src="C:\Users\clare\Documents\GalsThatCode\tasks\2-disney-films\Trainspotting.jpg" width="300" height="500">
+<p>An interesting watch.</p>
+
+<h1>Blue Valentine</h1>
+<button onclick="ShowDescription('description4')">Show Description</button>
+<h2 id="description4" class="description">Cindy and Dean's dysfunctional marriage fails to stand the test of time as they try to raise their young daughter and rekindle their relationship.</h2>
+<img src="C:\Users\clare\Documents\GalsThatCode\tasks\2-disney-films\BlueValentine.jpg" width="300" height="500">
+<p>Interesting watch surrounding relationships.</p>
+
+<h1>Back to Black</h1>
+<button onclick="ShowDescription('description5')">Show Description</button>
+<h2 id="description5" class="description">Singer Amy Winehouse's tumultuous relationship with Blake Fielder-Civil inspires her to write and record the groundbreaking album "Back to Black."</h2>
+<img src="C:\Users\clare\Documents\GalsThatCode\tasks\2-disney-films\BackToBlack.jpg" width="300" height="500">
+<p>A recent film and a decent netflix and chill watch.</p>
+
+<script>
+    function ShowDescription(descriptionId) {
+        const descriptionElement = document.getElementById(descriptionId);
+        if (descriptionElement.style.display === "none") {
+            descriptionElement.style.display = "block"; // Show the description
+        } else {
+            descriptionElement.style.display = "none";  // Hide the description
+        }
+    }
+</script>
+
+</body>
+</html>
