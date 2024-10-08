@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Films</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: left;
+            background-color: #0e2433;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 45px;
+        }
+
+        .content {
+            padding: 30px;
+            background-color: white;
+        }
+
+        .film {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .film img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .film-description h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #0e2433;
+        }
+
+        .film-description p {
+            font-size: 16px;
+            margin: 0;
+            display: none; /* Initially hide all descriptions */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0e2433;
+            color: white;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>My Top 5 Favorite Films</h1>
+    </div>
+
+    <div class="content">
+        <div class="film">
+            <img src="Shrek2.jpg" alt="Shrek 2">
+            <div class="film-description">
+                <h2>1. Shrek 2</h2>
+                <p class="description">Ogre who has a pet donkey visits his royal in-laws</p>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDescription(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="film">
+            <img src="devil-wears-prada.jpg" alt="The Devil Wears Prada">
+            <div class="film-description">
+                <h2>2. The Devil Wears Prada</h2>
+                <p class="description">Anne Hathaway gets a job at a fashion magazine</p>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDescription(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="film">
+            <img src="shawshank.jpg" alt="The Shawshank Redemption">
+            <div class="film-description">
+                <h2>3. The Shawshank Redemption</h2>
+                <p class="description">Wrongfully imprisoned man plans his escape</p>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDescription(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="film">
+            <img src="final-destination-3.jpg" alt="Final Destination 3">
+            <div class="film-description">
+                <h2>4. Final Destination 3</h2>
+                <p class="description">People cheat death and then die individually</p>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDescription(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="film">
+            <img src="butterfly-effect.jpg" alt="The Butterfly Effect">
+            <div class="film-description">
+                <h2>5. The Butterfly Effect</h2>
+                <p class="description">Ashton Kutcher changes significant events in his childhood and experiences outcomes</p>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDescription(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 My Favorite Films</p>
+    </footer>
+
+    <script>
+        function toggleDescription(checkbox) {
+            // Get the sibling description paragraph
+            const description = checkbox.closest('.film-description').querySelector('.description');
+            
+            // Show the description if checkbox is checked, hide it otherwise
+            description.style.display = checkbox.checked ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
